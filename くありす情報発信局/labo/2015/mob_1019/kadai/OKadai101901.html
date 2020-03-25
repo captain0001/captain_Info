@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ボタンを設ける</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <style>div {padding: 5px}</style>
+    <script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script>
+      $(function(){
+        $('#radio').buttonset();
+        $('#checkbox').buttonset();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="radio">
+    成績
+    <input type="radio" id="kou" name="radio"><label for="kou">甲</label>
+    <input type="radio" id="otu" name="radio" checked="checked"><label for="otu">乙</label>
+    <input type="radio" id="hei" name="radio"><label for="hei">丙</label>
+    <input type="radio" id="tyou" name="radio"><label for="tyou">丁</label>
+  </div>
+    <div id="checkbox">
+      趣味
+      <input id="r1" type="checkbox" name="radio" /><label for="r1">茶道</label>
+      <input id="r2" type="checkbox" name="radio" /><label for="r2">華道</label>
+      <input id="r3" type="checkbox" name="radio" /><label for="r3">書道</label>
+    </div>      
+  </body>
+</html>

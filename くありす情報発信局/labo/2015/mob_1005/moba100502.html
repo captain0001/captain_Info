@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ボタンを設ける</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" ref="stylesheet" />
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script>
+      $(function(){
+        $('#btn').button({label: "次へ"});
+        $('#btn').button("enable");
+        $('#btn2').button({label: "前へ"});
+        $('#btn2').button("enable")
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn"></button>
+    <button id="btn2"></button>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>hoge</title>
+	</head>
+	<script>
+		function setValue(){
+			var elm = document.getElementById("tx1");
+			elm.value = "Hello!";
+			var elms = document.getElementsByName("txt");
+			elm[0].value = "hellooooooooooooooo!!!!";
+		}
+	</script>
+	<body>
+	<input id = "tx1" type = "text" name = "txt">
+	<input id = "tx2" type = "text" name = "txt">
+	<input id = "tx3" type = "text" name = "txt">
+	<button onclick = "setValue();">クリック</button>
+	</body>
+</html>

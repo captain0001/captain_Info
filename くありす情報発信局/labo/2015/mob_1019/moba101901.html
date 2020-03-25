@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ボタンを設ける</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <style>div {padding: 5px}</style>
+    <script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script>
+      $(function(){
+        $('#btn').button();
+        $('#toggle').button();
+        $('#checkbox').buttonset();
+        $('#radio').buttonset();
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <button id="btn">単一のボタン</button>
+      <input id="toggle" type="checkbox" />
+      <label for="toggle">トグルボタン</label>
+    </div>
+    <div id="checkbox">
+      <input id="c1" type="checkbox" /><label for="c1">チ</label>
+      <input id="c2" type="checkbox" /><label for="c2">エ</label>
+      <input id="c3" type="checkbox" /><label for="c3">ツ</label>
+      <input id="c4" type="checkbox" /><label for="c4">ク</label>
+    </div>
+    <div id="radio">
+      <input id="r1" type="radio" name="radio" /><label for="r1">ラ</label>
+      <input id="r2" type="radio" name="radio" /><label for="r2">ヂ</label>
+      <input id="r3" type="radio" name="radio" /><label for="r3">ヲ</label>
+    </div>      
+  </body>
+</html>

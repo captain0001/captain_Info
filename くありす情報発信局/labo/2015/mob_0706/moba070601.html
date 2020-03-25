@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>sportform!</title>
+	</head>
+	<body>
+		<form method=post action="submit.cgi">
+			<p>どのスポーツが一番好きですか?<br>
+				<input type=radio name="sports" value="1">野球
+				<input type=radio name="sports" value="2">サッカー
+				<input type=radio name="sports" value="3">バスケットボール
+				<input type=radio name="sports" value="4">テニス
+				<input type=radio name="sports" value="5">ゴルフ
+			</p>
+			<p>
+				好きなスポーツは？(複数回答可)<br>
+				<input type=checkbox name="baseball" value="1">野球
+				<input type=checkbox name="soccer" value="1">サッカー
+				<input type=checkbox name="basket" value="1">バスケットボール
+				<input type=checkbox name="tennis" value="1">テニス
+				<input type=checkbox name="golf" value="1">ゴルフ
+			</p>
+			<p>
+				あなたの学科を選んでください 
+				<select name="dept">
+				<option selected value="0">指定なし</option>
+				<option value="1">総合情報</option>
+				<option value="2">環境情報</option>
+				<option value="3">情報システム</option>
+				</select>
+			</p>
+			<p>
+				学籍番号を入力してください
+				<input type=text size=7 maxlength=6 name="student_id">
+			</p>
+			<p>
+				コメントがあれば記入してください<br>
+				<textarea name=comment rows=4 cols=40>
+					ここに書いてください
+				</textarea>
+			</p>
+				
+			<p>
+				<input type=submit value="送信">
+				<input type=reset value="クリア">
+			</p>
+		</form>
+	</body>
+</html>

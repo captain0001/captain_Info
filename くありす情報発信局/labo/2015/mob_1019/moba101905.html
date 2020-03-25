@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>自動補完</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <style>div {padding: 5px}</style>
+    <script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script>
+      $(function(){
+        var names = [ "takeshi","taro","jiro","jun","junichi" ];
+        $("#name").autocomplete({
+          delay: 100,
+          source: names
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <label for="name">名前をローマ字で入れてください</label>
+    <input id="name" />
+  </body>
+</html>

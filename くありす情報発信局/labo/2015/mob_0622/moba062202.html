@@ -1,0 +1,100 @@
+<DOCTYPE! html>
+	<head>
+		<title>モバイルシステムa『JavaScriptで多次元配列を学ぶ』(2015年06月22日)</title>
+		<meta charset="utf-8">
+		<style>
+			.code{
+				color: #99ffaa;
+				background-color: #555555;
+			}
+		</style>
+		<script>
+			//	index 0,1,2
+			//	↓のように書くといいでしょう！
+			var number = [
+				[ 10 , 20 , 30 ],
+				[ 40 , 50 , 60 ]
+			];
+			
+			//------------<ここまで>--------------
+			
+			alert(number[1][2]);
+			alert(number.length)
+			alert(number[0].length)
+		</script>
+	</head>
+	<body>
+		<h1>モバイルシステムa『JavaScriptで多次元配列を学ぶ』(2015年06月22日)</h1>
+		<hr>
+		↓コードになります。<br>
+		<div class="code">
+			var number = [<br>
+				[ 10 , 20 , 30 ],<br>
+				[ 40 , 50 , 60 ]<br>
+			];<br>
+			<br>
+			<br>
+			alert(number[1][2]);<br>
+			alert(number.length)<br>
+			alert(number[0].length)<br>
+		</div>
+		<br>
+		以下のようになっています<br>
+		<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#000000">
+			<tr bgcolor="#33aa88">
+				<th>
+					
+				</th>
+				<th>
+					0
+				</th>
+				<th>
+					1
+				</th>
+				<th>
+					2
+				</th>
+			</tr>
+			<tr>
+				<th bgcolor="#33aa88">
+					0
+				</th>
+				<th>
+					10
+				</th>
+				<th>
+					20
+				</th>
+				<th>
+					30
+				</th>
+			</tr>
+			<tr>
+				<th bgcolor="#33aa88">
+					1
+				</th>
+				<th>
+					40
+				</th>
+				<th>
+					50
+				</th>
+				<th>
+					60
+				</th>
+			</tr>
+		</table>
+		<br>
+		『number[1][2]』は、配列の場所を指してます。<br>
+		2行目([1])の3列目([2])を指してます。<br>
+		なので、１つ目のアラートは、60を指してます。<br>
+		<br>
+		2つ目のアラートは、文字数を表します<br>
+		2桁なので、2と表示されます<br>
+		<br>
+		3つ目のアラートは、その配列の要素数を表します<br>
+
+		<hr>
+		<a href="#" onClick="history.back(); return false;">戻る</a>
+	</body>
+</html>

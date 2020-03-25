@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>要素の中身</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+      function load() {
+        $.getJSON("item.json",
+          function(data) {
+            for (var i=0; i" + data[i].name + "");
+              $("#list > li:last").css("color", "red");
+            }
+          }
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <ul id="list">
+    </ul>
+    <button onclick="load();">JSON読み込み</button>    
+  </body>
+</html>

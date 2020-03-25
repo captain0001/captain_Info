@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>合わせてこんにちは!</title>
+	</head>
+	<script>
+		function inputCheck(){
+			if(document.frml.lastname.value == ""){
+				alert("姓を入力してください");
+			}else if (document.frml.firstname.value == ""){
+				alert("名を入力してください");
+			}else if (document.frml.gender[0].checked &&
+				!document.frml.gender[1].checked){
+				alert("性別を選択してください");
+			}else{
+				document.frml.submit();
+			}
+		}
+	</script>
+	<body>
+		<div>
+			<form name = "frml" action = "hoge.html">
+				<input type ="text" name = "lastname">
+				<input type ="button" value = "OK" onclick="inputCheck();">
+			</form>
+		</div>
+	</body>
+</html>

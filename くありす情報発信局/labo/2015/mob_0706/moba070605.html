@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>合わせてこんにちは!</title>
+	</head>
+	<script>
+		function check(e){
+			alert('e.value');
+		}
+	</script>
+	<body>
+		<div>
+			<input type = "button" value = "1" click = "check(this)"></button>
+			<input type = "button" value = "2" click = "check(this)"></button>
+			<input type = "button" value = "3" click = "check(this)"></button>
+			<br>
+			<input type = "text"
+			  onfocus = "console.log('get focus');"
+			  onfocus = "console.log('lost focus');" 
+			  onfocus = "console.log('changed');"
+			 >
+		<div>
+	</body>
+</html>

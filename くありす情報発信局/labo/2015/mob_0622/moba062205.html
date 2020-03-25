@@ -1,0 +1,27 @@
+<DOCTYPE! html>
+	<head>
+		<title>hoge</title>
+		<meta charset= "utf-8">
+		<script>
+			//連想配列＝オブジェクト≒JSON
+			var fav = {
+				food  : 'カレー' ;	//"カレー"
+				color : '青' ;		//
+				number: 1 ;
+			}
+			
+			//htmlは”が多いけど
+			//Jsだと’が多いらしい
+			fav.sports = 'サッカー';
+			alert(fav.food);
+			var key = 'food';
+			alert(fav.[key]);
+			alert(fav['color']);
+		</script>
+	</head>
+	<body>		
+		<a href="#" onClick="history.back(); return false;">戻る</a>
+	</body>
+</html>
+
+

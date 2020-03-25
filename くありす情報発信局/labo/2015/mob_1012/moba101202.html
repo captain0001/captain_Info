@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>リサイズ</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <style>
+      #resizable { width:150px; height:150px; padding:0.5em}
+      #resizable h3 { text-align:center; margin:0 }
+    </style>
+    <script>
+      $(function(){
+        $("#resizable").resizable();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="resizable" class="ui-widget-content">
+      <h3 class="ui-widget-header">大きさが変えられます！</h3>
+    </div>
+  </body>
+</html>

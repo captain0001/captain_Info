@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>#14-17 Componentに機能をもたせよう,いいね！ボタンを実装してみよう,Propsで値を渡してみよう,$emitを使ってイベントを発火させよう(20190828)</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <h1>#14-17 Componentに機能をもたせよう,いいね！ボタンを実装してみよう,Propsで値を渡してみよう,$emitを使ってイベントを発火させよう(20190828)</h1>
+        <hr>
+        <div id="app">
+            <p>Total Likes: {{ total }}</p>
+            <!-- <like-component message="Like" v-on:increment="incrementTotal"></like-component> -->
+            <like-component message="Like" @increment="incrementTotal"></like-component>
+            <like-component message="Awesome" @increment="incrementTotal"></like-component>
+            <like-component message="Great" @increment="incrementTotal"></like-component>
+            <like-component @increment="incrementTotal"></like-component>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="js/main4.js"></script>
+
+        <hr>
+		<a href="#" onClick="history.back(); return false;">戻る</a>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>要素の中身</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+      function change() {
+        $("#problem").load("udon.html p");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="problem">焼肉か刺身かそれが問題だ</div>
+    <button onclick="change();">内容変更！</button>
+  </body>
+</html>

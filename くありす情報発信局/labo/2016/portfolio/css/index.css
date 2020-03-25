@@ -1,0 +1,12 @@
+.position-bottom {
+	margin :0px;
+	padding: 0px;
+	position:fixed; 
+	bottom:0%;
+	right: 42%;
+}
+.center-position{
+	margin-left: 28%;
+	margin-right: 28%;
+	padding: 0%;
+}

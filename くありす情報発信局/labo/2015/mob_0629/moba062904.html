@@ -1,0 +1,28 @@
+<DOCTYPE! html>
+	<head>
+		<title>hoge</title>
+		<meta charset= "utf-8">
+		<script>
+		
+			var a = 'A'
+			var b;
+			//※JavaScriptで var 以外で変数を宣言するとグローバル変数になります
+			console.log(sayHello('hoshizora','hello'));
+			
+			//関数の呼び出し
+			
+			console.log(a+ sayHello('nishikino','hello'));
+			console.log(b);
+			function sayHello(name,greet){
+				var b = 'b'
+				return greet +' '+ name + a + b;
+			}
+		</script>
+	</head>
+	<body>
+		キーボードの「F12」を押して、コンソールを確認してください。<br>
+		<a href="/labo/studies-list1.html">戻る</a>
+	</body>
+</html>
+
+

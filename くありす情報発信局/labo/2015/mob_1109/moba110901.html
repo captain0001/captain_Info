@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ダイアログの例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="page1">
+      <div data-role="header">
+        <h1>朝食の質問</h1>
+      </div>
+      <div role="main" class="ui-content">
+      <p>今日は朝食を食べましたか？</p>
+        <p><button="#yes" data-rel="dialog" class="ui-btn">
+          はい</a></p>
+          <p><button="#no" data-rel="dialog" class="ui-btn">
+          いいえ</a></p>
+      </div>
+    </div>
+    <div data-role="page" id="yes">
+      <div data-role="header">
+        <h1>朝食の質問</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <p>よろしい</p>
+        <p><a href="#" data-rel="back">前のページへ</a></p>
+      </div>
+    </div>
+        <div data-role="page" id="no">
+      <div data-role="header">
+        <h1>朝食の質問</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <p>よくないですね</p>
+        <p><a href="#" data-rel="back">前のページへ</a></p>
+      </div>
+  </body>
+</html>

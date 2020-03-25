@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>hoge</title>
+	</head>
+	<script>
+		function setValue(){
+			var elm = document.getElementById("hoge");
+			elm.innerHTML = "Hello!";
+			var elms = document.getElementsByName("moge");
+			elm[0].innerHTML = "hellooooooooooooooo!!!!";
+		}
+		window.onload = function(){
+			var btn = document.getElementById("btn1");
+			btn onclick = setValue;
+		}
+	</script>
+	<body>
+	<p>文章１</p>
+	<p id = "hoge">文章２</p>
+	<p id = "hoge">文章３</p>
+	<p id = "moge">文章３</p>
+	<button = "btn1">クリック</button>
+	</body>
+</html>

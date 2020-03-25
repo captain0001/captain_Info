@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ドラッグアンドドロップ</title>
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <style>
+      .drag { width:100px; height:100px; padding:0.5em; margin:1em; float:left }
+      #drop { width:150px; height:150px; padding:0.5em; margin:1em; float:left }
+    </style>
+    <script>
+      $(function(){
+        $(".drag").draggable();
+        $("#drop").droppable({
+          drop: function(event, ui){
+            $(this)
+              .addClass("ui-state-highlight")
+              .html(ui.draggable.text()+"をドロップしました");
+          },
+          out: function(event, ui){
+            $(this)
+              .removeClass("ui-state-highlight")
+              .html("さようなら"+ui.draggable.text());
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="pochi" class="ui-widget-content drag" style="background:pink">
+      ポチ(ワンワン)
+    </div>
+    <div id="tama" class="ui-widget-content drag" style="background:yellow">
+      タマ(ニャーン)
+    </div>
+    <div id="drop" class="ui-widget-header">
+      ここにドラッグしてね
+    </div>
+  </body>
+</html>

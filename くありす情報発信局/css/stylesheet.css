@@ -4,7 +4,9 @@ body {
 	color: #000000;
 	background-color: #98fb98;
 }
-
+img {
+	width: 100%;
+}
 a{
 	color: inherit;
 	text-decoration: none;
@@ -36,11 +38,17 @@ iframe {
 	background-color: rgb(221, 191, 241);
 }
 .homebuttom {
+	margin: 5px;
 	position: fixed;
-	top: 5px;
-	/*left: 95%;*/
-	right: 5px;
+	top: 0;
+	right: 0;
 	/*bottom: 95%;*/
+}
+.homebuttom img {
+	width: 50px;
+}
+.homebuttom .sp {
+	display: none;
 }
 .footer {
 	text-align: center;
@@ -79,4 +87,42 @@ iframe {
 	color: #ffffff;
 	background-color: #666969;
 	font-size: 20px;
+}
+
+@media screen and (max-width: 810px){
+	.menu {
+		flex-direction: column;
+	}
+	.button {
+		margin: auto;
+		width: 96%;
+		height: 250px;
+		font-size: 100px;
+	} 
+	.homebuttom {
+		position: sticky;
+		bottom: 0%;
+		background-color: #9f98fb;
+	}
+	.homebuttom .pc {
+		display: none;
+	}
+	.homebuttom .sp {
+		display: flex;
+		height: 100px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		border: solid 20px #a09494;
+	}
+	.homebuttom .sp p {
+		font-size: 80px;
+		color: #fdffe7;
+		
+	}
+}
+@media screen and (min-width: 810px){
+	.homebuttom .sp {
+		display: none;
+	}
 }

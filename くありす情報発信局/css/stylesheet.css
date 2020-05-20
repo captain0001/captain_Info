@@ -3,7 +3,6 @@
 body {
 	color: #000000;
 	background-color: #98fb98;
-	
 }
 
 a{
@@ -59,4 +58,25 @@ iframe {
 
 .menu div {
 	margin: 5px;
+}
+
+.newsIframe {
+	padding: 5px;
+	color: #000000;
+	background-color: #f0fff0;
+}
+
+.newsIframe ul {
+	margin: 15px 0 ;
+}
+
+.newsIframe li {
+	margin: 0 30px ;
+	list-style-type: square;
+}
+
+.newsIframe h3 {
+	color: #ffffff;
+	background-color: #666969;
+	font-size: 20px;
 }

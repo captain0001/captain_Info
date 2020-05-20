@@ -1,6 +1,62 @@
 @charset "utf-8";
 
 body {
-	/*color: #000000;
-	background-color: #ffdddd;*/
+	color: #000000;
+	background-color: #98fb98;
+	
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+iframe {
+	width: 100%;
+}
+/* global */
+.container {
+	margin: auto;
+	max-width: 760px;
+	width: 96%;
+}
+.button {
+	height: 100px;
+	width: 350px;
+	border: solid 10px #a09494;
+	border-radius: 10px;
+	background-color: rgb(126, 241, 161);
+	font-size: 54px;
+	font-weight: bold;
+	color: #fdffe7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button:hover {
+	background-color: rgb(221, 191, 241);
+}
+.homebuttom {
+	position: fixed;
+	top: 5px;
+	/*left: 95%;*/
+	right: 5px;
+	/*bottom: 95%;*/
+}
+.footer {
+	text-align: center;
+}
+.news {
+	width: 100%;
+}
+/* local */
+.menu {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+}
+
+.menu div {
+	margin: 5px;
 }

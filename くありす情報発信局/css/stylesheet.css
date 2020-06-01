@@ -4,6 +4,14 @@ body {
 	color: #000000;
 	background-color: #98fb98;
 }
+h1{
+	color: #ffffff;
+	background-color: #222222;
+}
+h3{
+	color: #ffffff;
+	background-color: #222222;
+}
 img {
 	width: 100%;
 }
@@ -55,6 +63,14 @@ iframe {
 }
 .news {
 	width: 100%;
+}
+.message{
+	color: #000000;
+	background-color: #eef3aa;
+}
+.Text-area{
+	color: #000000;
+	background-color: #d2e0d2;
 }
 /* local */
 .menu {

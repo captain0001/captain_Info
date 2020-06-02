@@ -6,6 +6,7 @@ body {
 h1{
 	color: #ffffff;
 	background-color: #222222;
+	font-size: 32px;
 }
 h3{
 	color: #ffffff;
@@ -69,6 +70,10 @@ iframe {
 .Text-area{
 	color: #000000;
 	background-color: #d2e0d2;
+	padding: 5px 0 20px 0;
+}
+.headWrap {
+	text-align: center;
 }
 /* local */
 .menu {
@@ -101,6 +106,18 @@ iframe {
 	color: #ffffff;
 	background-color: #666969;
 	font-size: 20px;
+}
+
+.headWrap h1 {
+	padding: 5px 0 15px 0;
+	border-bottom: solid 5px #ffffff;
+}
+
+.codeView {
+	margin-left: auto;
+	width: 750px;
+	color: #c3ffcd;
+	background-color: #3f3f3f;
 }
 
 @media screen and (max-width: 810px){

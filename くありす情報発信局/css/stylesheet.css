@@ -70,7 +70,7 @@ iframe {
 .Text-area{
 	color: #000000;
 	background-color: #d2e0d2;
-	padding: 5px 0 20px 0;
+	padding: 5px 5px 20px 5px;
 }
 .headWrap {
 	text-align: center;
@@ -114,8 +114,8 @@ iframe {
 }
 
 .codeView {
-	margin-left: auto;
-	width: 750px;
+	margin-left: 10px;
+	width: 740px;
 	color: #c3ffcd;
 	background-color: #3f3f3f;
 }

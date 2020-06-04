@@ -49,7 +49,94 @@
                 [;]は、終了を意味します<br>
                 <hr>
                 <h4>使用例</h4>
-                $('li').css('width', '200px').css('height', '100px');
+                $('li').css('width', '200px').animate('height', '100px');
+            </div>
+        </section>
+        <section id='5'>
+            <h3>複数プロパティ指定</h3>
+            <div class="textArea">
+                <h4>使用例</h4>
+                $(function(){<br>
+                　　$('#typo').css({<br>
+            　　　　　　font-size, '50px',<br>
+            　　　　　　background-color, '#ae5e9b',<br>
+            　　　　　　color, '#ebc000'<br>
+            　　　　});<br>
+                });<br>
+            <hr>
+            ※[,]で繋ぐことを忘れずに
+            </div>
+        </section>
+        <section id=''>
+            <h3>Chapter2で使用するメソッド</h3>
+            <div class="textArea">
+                <h4>cssメソッド</h4>
+                $('li').css('width', '200px')<br>
+                <h4>onメソッド</h4>
+                <table border="1">
+                    <tr>
+                        <th>イベントタイプ</th>
+                        <th>該当するタイミング</th>
+                    </tr>
+                    <tr>
+                        <td>mouseover</td>
+                        <td>要素にマウスが乗った</td>
+                    </tr>
+                    <tr>
+                        <td>mouseout</td>
+                        <td>要素からマウスが離れた</td>
+                    </tr>
+                    <tr>
+                        <td>mousedown</td>
+                        <td>要素上でクリックボタンが押下された</td>
+                    </tr>
+                    <tr>
+                        <td>mouseup</td>
+                        <td>要素上でクリックボタンが離れた</td>
+                    </tr>
+                    <tr>
+                        <td>mousemove</td>
+                        <td>要素上でマウスカーソルが動いている</td>
+                    </tr>
+                    <tr>
+                        <td>click</td>
+                        <td>要素がクリックされた</td>
+                    </tr>
+                    <tr>
+                        <td>dblclick</td>
+                        <td>要素がダブルクリックされた</td>
+                    </tr>
+                    <tr>
+                        <td>keydown</td>
+                        <td>要素にフォーカスした状態で、キーボードのキーが押された</td>
+                    </tr>
+                    <tr>
+                        <td>keyup</td>
+                        <td>要素にフォーカスした状態で、キーボードのキーが離された</td>
+                    </tr>
+                    <tr>
+                        <td>foucs</td>
+                        <td>要素にフォーカスが</td>
+                    </tr>
+                    <tr>
+                        <td>blur</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>change</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>resize</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>scroll</td>
+                        <td></td>
+                    </tr>
+                </table>
+            <hr>
+            ※[,]で繋ぐことを忘れずに
             </div>
         </section>
     </div>

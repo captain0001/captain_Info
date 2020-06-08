@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* base */
 body {
 	background-color: #98fb98;
 }
@@ -82,6 +82,14 @@ iframe {
 }
 .headWrap {
 	text-align: center;
+}
+.importantRedFont {
+	color: #ff2222;
+	font-weight: bold;
+}
+.importantBlueFont {
+	color: #2222ff;
+	font-weight: bold;
 }
 /* local */
 .menu {

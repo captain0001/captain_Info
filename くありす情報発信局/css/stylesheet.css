@@ -118,6 +118,22 @@ footer {
 	font-weight: bold;
 }
 /* local */
+a:link.button {
+	color: var(--colorBase);
+}
+
+a:visited.button {
+	color: var(--colorVisited);
+}
+
+a:hover.button {
+	color: var(--colorHover);
+}
+
+a:active.button {
+	color: var(--colorActive);
+}
+
 .menu {
 	margin: auto;
 	display: flex;

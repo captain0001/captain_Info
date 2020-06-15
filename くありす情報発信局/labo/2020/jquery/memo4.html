@@ -19,8 +19,8 @@
             <h3>成果物</h3>
             <div class="textArea">
                 <ul>
-                    <li>【<a href="./chapter4/01/index.html">作成物リンク01</a>】</li>
-                    <li>【<a href="./chapter4/02/index.html">作成物リンク02</a>】</li>
+                    <li>ボタン【<a href="./chapter4/01/index.html">作成物リンク01</a>】</li>
+                    <li>キャプション表現【<a href="./chapter4/02/index.html">作成物リンク02</a>】</li>
                     <li>【<a href="./chapter4/03/index.html">作成物リンク03</a>】</li>
                     <li>【<a href="./chapter4/04/index.html">作成物リンク04</a>】</li>
                     <li>【<a href="./chapter4/05/index.html">作成物リンク05</a>】</li>
@@ -38,12 +38,49 @@
             </div>
         </section>
         <section id='3'>
-            <h3>findメソッド</h3>
+            <h3>Chapter4で登場するメソッド</h3>
+            <h4>findメソッド</h4>
             <div class="textArea">
-                find('絞り込むセレクタ')<br>
+                <div>
+                    find('絞り込むセレクタ')
+                </div>
                 <ul>
                     <li>「jQueryオブジェクトに含まれる各要素の子孫要素の中から、セレクタを使用してさらに要素を絞り込むメソッド」</li>
                 </ul>
+            </div>
+            <h4>filterメソッド</h4>
+            <div class="textArea">
+                <div>
+                    find('絞り込むセレクタ')
+                </div>
+                <ul>
+                    <li>「jQueryオブジェクトに含まれる各要素の子孫要素の中から、セレクタを使用してさらに要素を絞り込むメソッド」</li>
+                </ul>
+                <div class="important">
+                    <h5>findメソッドとfilterメソッドの違い</h5>
+                    <table>
+                        <tr class="row">
+                            <td class="col">find()</td>
+                            <td class="col">jQueryオブジェクトの各要素の子孫要素を対象として要素を絞り込む</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col">filter()</td>
+                            <td class="col">jQueryオブジェクトの各要素を対象として要素を絞り込む</td>
+                        </tr>
+                    </table>
+                    要するに、CSSのセレクタでの例えでいうと
+                    <table>
+                        <tr class="row">
+                            <td class="col">findメソッド</td>
+                            <td class="col">'div▲.text'と指定</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col">filterメソッド</td>
+                            <td class="col">'div.text'と指定</td>
+                        </tr>
+                    </table>
+                    ※「▲」は半角スペースを意味します<br>
+                </div>
             </div>
         </section>
         <section id='4'>
@@ -71,7 +108,28 @@
             </div>
         </section>
         <section id='5'>
-            
+            <h3>・02[キャプション表現]<b>※成果物補足</b></h3>
+            <h4>1つ目の画像のキャプション表現</h4>
+            <div class="textArea">
+                <ul>
+                    <li>マウスオーバーすると、徐々にキャプションが表示され、外周に影がつく</li>
+                    <li>マウスアウトすると、元に戻る</li>
+                </ul>
+            </div>
+            <h4>2つ目の画像のキャプション表現</h4>
+            <div class="textArea">
+                <ul>
+                    <li>マウスオーバーすると、キャプションが左側からスライドインされ、外周に影がつく</li>
+                    <li>マウスアウトすると、元に戻る</li>
+                </ul>
+            </div>
+            <h4>3つ目の画像のキャプション表現</h4>
+            <div class="textArea">
+                <ul>
+                    <li>マウスオーバーすると、画像下部からキャプションがスライドインされ、画像自体も少し上方向にスライドされ、外周に影がつく</li>
+                    <li>マウスアウトすると、元に戻る</li>
+                </ul>
+            </div>
         </section>
         <section id='6'>
             

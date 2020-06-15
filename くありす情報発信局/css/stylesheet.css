@@ -123,11 +123,11 @@ a:link.button {
 }
 
 a:visited.button {
-	color: var(--colorVisited);
+	color: var(--colorBase);
 }
 
 a:hover.button {
-	color: var(--colorHover);
+	color: var(--colorBase);
 }
 
 a:active.button {

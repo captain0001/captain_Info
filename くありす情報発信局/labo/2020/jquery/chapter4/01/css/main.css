@@ -60,25 +60,29 @@ button {
     letter-spacing: 0.15em;
 }
 
-#typo {
-    margin: 0;
-    padding: 0;
-    background-color: #3498db;
-    font-weight: bold;
-    font-size: 110px;
-    color: #fff;
-    text-align: center;
-    line-height: 500px;
-    height: 500px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+#buttons1 {
+    background-color: #ebc000;
 }
 
-#typo .inner {
+#buttons1 .inner {
     position: relative;
     width: 976px;
     margin: 0 auto;
+}
+
+#buttons1 button {
+    display: block;
+    float: left;
+    width: 224px;
+    height: 80px;
+    margin: 0 10px 20px;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    color: #ebc000;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
 }
 
 .page-footer {
@@ -114,6 +118,36 @@ button {
 }
 .clearfix:after {
     clear: both;
+}
+
+
+/* #button1 2行目 */
+#buttons1 button {
+    border: solid 0px rgba(174,94,155,1.0);
+}
+
+/* #button1 2行目 */
+#buttons1 button {
+    position: relative;
+}
+
+#buttons1 button .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#buttons1 button span span {
+    display: block;
+    width: 224px;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    background-color: #ae5e9b;
+    border-radius: 20px;
 }
 
 

@@ -22,8 +22,8 @@
                     <li>ボタン【<a href="./chapter4/01/index.html">作成物リンク01</a>】</li>
                     <li>キャプション表現【<a href="./chapter4/02/index.html">作成物リンク02</a>】</li>
                     <li>丸ボタン(斜め配置)【<a href="./chapter4/03/index.html">作成物リンク03</a>】</li>
-                    <li>【<a href="./chapter4/04/index.html">作成物リンク04</a>】</li>
-                    <li>【<a href="./chapter4/05/index.html">作成物リンク05</a>】</li>
+                    <li>見え隠れするサイドバー【<a href="./chapter4/04/index.html">作成物リンク04</a>】</li>
+                    <li>タイポグラフィの表現(文字に対して)【<a href="./chapter4/05/index.html">作成物リンク05</a>】</li>
                 </ul>
             </div>
         </section>
@@ -80,7 +80,7 @@
                     ※「▲」は半角スペースを意味します<br>
                 </div>
                 <h4>eachメソッド</h4>
-                <div>
+                <div class="codeView">
                     each(function(index){   <br>
                         要素ごとの処理        <br>
                     });                     <br>
@@ -90,11 +90,12 @@
                     <ol>indexに関して→「現在処理されている要素の番号(全要素のうち何番目の要素か)」</ol>
                 </ul>
                 <h5>実例</h5>
-                $('#buttons2 button').each(function(index){ <br>
-                　　var pos = index * 40 - 40;              <br>
-                　　$(this).css('top', pos);                <br>
-                });                                         <br>
-
+                <div class="codeView">
+                    $('#buttons2 button').each(function(index){ <br>
+                    　　var pos = index * 40 - 40;              <br>
+                    　　$(this).css('top', pos);                <br>
+                    });                                         <br>
+                </div>
                 <h4>toggleClassメソッド</h4>
                 <p>
                     「引数に指定されたクラス名(文字列)が、jQueryオブジェクト内の要素の<br>
@@ -102,25 +103,31 @@
                     削除するメソッド」<br>
                 </p>
                 <h5>実例</h5>
-                <p>
+                <div class="codeView">
                     var $asidebutton = $aside.find('button').on('click', function(){<br>
                         $aside.toggleClass('open');<br>
                     });<br>
-                </p>
+                </div>
                 <div class="items">
                     <div class="item">
                         実行前
                         <hr>
-                        &lt;aside class="open"&gt;<br>
-                        　&lt;!-- 内容は省略 --&gt;<br>
-                        &lt;/aside&gt;<br>
+                        <div class="codeArea">
+                            &lt;aside class="open"&gt;<br>
+                            　&lt;!-- 内容は省略 --&gt;<br>
+                            &lt;/aside&gt;<br>
+                        </div>
+                        
                     </div>
                     <div class="item">
                         実行後 openクラスが削除される
                         <hr>
-                        &lt;aside&gt;<br>
-                        　&lt;!-- 内容は省略 --&gt;<br>
-                        &lt;/aside&gt;<br>
+                        <div class="codeArea">
+                            &lt;aside&gt;<br>
+                            　&lt;!-- 内容は省略 --&gt;<br>
+                            &lt;/aside&gt;<br>
+                        </div>
+                        
                     </div>
                 </div>
                 <h4>attrメソッド</h4>
@@ -143,16 +150,20 @@
                     <div class="item">
                         実行前
                         <hr>
-                        &lt;p id = "add" class="add"&gt;<br>
+                        <div class="codeArea">
+                            &lt;p id = "add" class="add"&gt;<br>
                         　&lt;!-- 内容は省略 --&gt;<br>
                         &lt;/p&gt;<br>
+                        </div>
                     </div>
                     <div class="item">
                         実行後 testクラスが追加される
                         <hr>
-                        &lt;p id = "add" class="add test"&gt;<br>
+                        <div class="codeArea">
+                            &lt;p id = "add" class="add test"&gt;<br>
                         　&lt;!-- 内容は省略 --&gt;<br>
                         &lt;/p&gt;<br>
+                        </div>
                     </div>
                 </div>
                 <h4>removeClassメソッド(toggleClassメソッドの類似メソッド)</h4>
@@ -160,23 +171,27 @@
                     「引数の文字列(クラス名)をclass属性に削除するメソッド」<br>
                 </p>
                 <h5>実例</h5>
-                <p>
+                <div class="codeView">
                     $('#add').removeClass('test')
-                </p>
+                </div>
                 <div class="items">
                     <div class="item">
                         実行前
                         <hr>
-                        &lt;p id = "add" class="add test"&gt;<br>
+                        <div class="codeArea">
+                            &lt;p id = "add" class="add test"&gt;<br>
                         　&lt;!-- 内容は省略 --&gt;<br>
                         &lt;/p&gt;<br>
+                        </div>
                     </div>
                     <div class="item">
                         実行後 testクラスが追加される
                         <hr>
-                        &lt;p id = "add" class="add"&gt;<br>
+                        <div class="codeArea">
+                            &lt;p id = "add" class="add"&gt;<br>
                         　&lt;!-- 内容は省略 --&gt;<br>
                         &lt;/p&gt;<br>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,14 +204,16 @@
                     &lt;aside&gt; …… 余談・補足情報のセクションであることを示す
                 </div>
                 <h5>使い方</h5>
-                &lt;aside&gt; <br>
-                　&lt;h1&gt;アンパンマン誕生秘話&lt;/h1&gt; <br>
-                　&lt;p&gt; <br>
-                　　作者のやなせたかし先生は、人間は食べられないのが一番つらい、<br>
-                　　それを自分の身を犠牲にして助ける人こそが本当のヒーローだと考えて、<br>
-                　　アンパンマンのキャラクターを思いついたそうです。<br>
-                　&lt;/p&gt;<br>
-                &lt;aside&gt;<br>
+                <div class="codeView">
+                    &lt;aside&gt; <br>
+                    　&lt;h1&gt;アンパンマン誕生秘話&lt;/h1&gt; <br>
+                    　&lt;p&gt; <br>
+                    　　作者のやなせたかし先生は、人間は食べられないのが一番つらい、<br>
+                    　　それを自分の身を犠牲にして助ける人こそが本当のヒーローだと考えて、<br>
+                    　　アンパンマンのキャラクターを思いついたそうです。<br>
+                    　&lt;/p&gt;<br>
+                    &lt;aside&gt;<br>
+                </div>
             </div>
         </section>
         <section id='5'>
@@ -269,16 +286,31 @@
                 </div>
             </div>
         </section>
-        <!-- <section id='9'>
-            <h3>・05[見え隠れするサイドバー]<b>※成果物補足</b></h3>
+        <section id='9'>
+            <h3>・05[タイポグラフィの表現]<b>※成果物補足</b></h3>
             <div class="textArea">
-                <h4>ボタン自体のホバーエフェクトの内容</h4>
-                <ul>
-                    <li>マウスオーバーすると、ボタンが白背景が黄色背景になる</li>
-                    <li>マウスアウトすると、元に戻る</li>
-                </ul>
+                <h4>タイポグラフィとは？</h4>
+                タイポグラフィ（英: typography）は、活字（あるいは一定の文字の形状を複製し反復使用して印刷するための媒体）を用い、それを適切に配列することで、印刷物における文字の体裁を整える技芸である。<br>
+                ※wikipedia一部転機(<a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%A4%E3%83%9D%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3#:~:text=%E3%82%BF%E3%82%A4%E3%83%9D%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%EF%BC%88%E8%8B%B1%3A%20typography%EF%BC%89%E3%81%AF,%E3%82%92%E6%95%B4%E3%81%88%E3%82%8B%E6%8A%80%E8%8A%B8%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82">リンク</a>)<br>
+                <div class="important">
+                    要するに、文字の加工方法の一種ってことです(多分)
+                </div>
+                <h4>文字に影をつける外部ファイル</h4>
+                <h5>「jquery.typoshadow.js」というプラグインを読み込もう</h5>
+                下記のコードをmain.jsの上部に追記して使用します<br>
+                <div class="codeView">
+                    &lt;script src="./js/vendor/jquery.typoshadow.js"&gt;&lt;/script&gt;
+                </div>
+                <h4>「jquery.typoshadow.js」プラグインのメソッド</h4>
+                実例<br>
+                <div class="codeView">
+                    $(function(){<br>
+                    　$('#typo').typoshadow();<br>
+                    });<br>
+                </div>
+                ※拡張プラグインに関しては必要に応じてなので詳細は端折ります
             </div>
-        </section> -->
+        </section>
         <footer>
             <a href="./">戻る</a>
         </footer>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メモ</title>
+    <!-- ↓リセットCSS -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- ↓ベースCSS -->
+    <link rel="stylesheet" href="../../../css/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chapter5</h1>
+        </header>
+        <hr>
+        <section id='1'>
+            <h3>成果物</h3>
+            <div class="textArea">
+                <ul>
+                    <li>滑らかな動きのスライドショー【<a href="./chapter5/01/index.html">作成物リンク01</a>】</li>
+                    <li>【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
+                    <li>【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
+                    <li>【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
+                    <li>【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
+                    <li>【<a href="./chapter5/06/index.html">作成物リンク06</a>】</li>
+                    <li>【<a href="./chapter5/07/index.html">作成物リンク07</a>】</li>
+                    <li>【<a href="./chapter5/08/index.html">作成物リンク08</a>】</li>
+                </ul>
+            </div>
+        </section>
+        <section id='2'>
+            <h3>Chapter5で学ぶこと</h3>
+            <div class="textArea">
+                <ul>
+                    <li>スライドショーに関して</li>
+                    <li>タブ</li>
+                    <li>スティッキーヘッダー</li>
+                    <li>スムーズスクロール</li>
+                </ul>
+            </div>
+        </section>
+        <section id='3'>
+            <h3>Chapter5で登場するメソッド</h3>
+            <div class="textArea">
+                <h4>eqメソッド</h4>
+                <div>
+                    eq()
+                </div>
+                <ul>
+                    <li>「複数あるjQueryオブジェクトのうち、引数に渡したインデックスに該当するものを選択するメソッド」</li>
+                    <li>※インデックスとは、配列の各要素に振られる数値のこと</li>
+                </ul>
+                <h5>実例</h5>
+                currentIndexに[0]をセットした場合、$slides.eq(0)をいうことになる
+                <div class="codeView">
+                    $slides.eq(currentIndex).fadeIn();
+                </div>
+                つまり、４枚あるうちの１枚目が選択されるということです。
+                <h4>fadeInメソッド</h4>
+                <div>
+                    fadeIn()<br>
+                </div>
+                <ul>
+                    <li>「<span class="codeArea">display: none;</span>が指定されて非表示になっているのを徐々に不透明度を変化させながら表示させるメソッド」</li>
+                </ul>
+                <h4>fadeOutメソッド</h4>
+                <div>
+                    fadeOut()
+                </div>
+                <ul>
+                    <li>fadeInメソッドと対になるメソッドなので、説明を省きます</li>
+                </ul>
+            </div>
+        </section>
+        <section id='4'>
+            <h3>Chapter5で登場するJavaScriptのメソッド</h3>
+            <div class="textArea">
+                <h4>setIntervalメソッド</h4>
+                <div>
+                    「指定した時間ごとに指定した処理を実行する関数」
+                </div>
+                <h5>使い方</h5>
+                7500ミリ秒(7.5秒)ごとにshowNextSlideを実行
+                <div class="codeView">
+                    setInterval(showNextSlide, 7500);<br>
+                </div>
+            </div>
+        </section>
+        <section id='5'>
+            <h3>オリジナルの関数に関して</h3>
+            <div class="textArea">
+                <h4>オリジナル関数の作成</h4>
+                (例)
+                <div class="codeView">
+                    function <span style="color: red;">showNextSlide</span> () {<br>
+                    　// 次のスライドを表示させる処理<br>
+                    }
+                </div>
+                ※赤文字部分の様に、名前つけて処理を呼び出す入れ物として使います
+            </div>
+        </section>
+        <section id='6'>
+            <h3>・01[滑らかな動きのスライドショー]<b>※成果物補足</b>[作成難度：レベル１]</h3>
+            <div class="textArea">
+                <h4>スライドショーの概要</h4>
+                スライドショーとは、時間の経過やボタンのクリックなどによって<br>
+                「スライド」(画像など)が切り替わるコンポーネント(部位)です。<br>
+                <h4>スライドショーの処理の流れ</h4>
+                この手順を念頭において作成する
+                <ol>
+                    <li>全てのスライドを1箇所に重ねて配置し、一旦、非表示にする</li>
+                    <li>最初のスライドのみをフェードインで表示する</li>
+                    <li>一定時間が経過したら、現在表示されているスライドをフェードアウトで非表示にし、次のスライドをフェードインで表示する</li>
+                    <li>以降は一定時間ごとに「現在のスライドをフェードアウト」と「次のスライドをフェードイン」を繰り返す</li>
+                    <li>最後のスライドが表示されたら先頭のスライドに戻り、[4]の処理を繰り返す。この動作はユーザーがそのページから離れるまで繰り返される</li>
+                </ol>
+                <img src="./img/slideLogic.jpg" alt="スライドショーの仕組み" srcset="">
+                <h4>主なjQueryメソッド</h4>
+                <ul>
+                    <li>each()</li>
+                    <li>find()</li>
+                    <li>eq()</li>
+                    <li>fadeIn()</li>
+                    <li>fadeOut()</li>
+                </ul>
+                <h4>主なJavaScriptメソッド</h4>
+                <ul>
+                    <li>setInterval()</li>
+                </ul>
+            </div>
+        </section>
+        <section id='7'>
+            <h3>JavaScriptが向こうになっている場合の考慮</h3>
+            <div class="textArea">
+                <h4>異常系の対応策</h4>
+                <div>
+                    「ブラウザのJavaScriptが無効になっていると何も表示されない」ケース
+                </div>
+                <h5>Modernizr</h5>
+                Modernizrは、ユーザーのブラウザでブラウザでJavaScriptやCSSなどの特定の機能が利用できるかどうかを検出するJavaScriptのライブラリーです。<br>
+                <br>
+                上記のケースに対して
+                <ul>
+                    <li>「ブラウザのJavaScriptが有効かどうか」を取得できる</li>
+                </ul>
+                ので、クラス名を有効時と無効時で場合分けをする処理を記載すると対策できます。<br>
+                細かい記述方法は、ググると出る気がします。ここではそんなものあるんだくらいでいいです。
+            </div>
+        </section>
+        <footer>
+            <a href="./">戻る</a>
+        </footer>
+    </div>
+</body>
+</html>

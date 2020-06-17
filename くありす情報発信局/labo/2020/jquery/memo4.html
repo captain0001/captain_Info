@@ -21,7 +21,7 @@
                 <ul>
                     <li>ボタン【<a href="./chapter4/01/index.html">作成物リンク01</a>】</li>
                     <li>キャプション表現【<a href="./chapter4/02/index.html">作成物リンク02</a>】</li>
-                    <li>【<a href="./chapter4/03/index.html">作成物リンク03</a>】</li>
+                    <li>丸ボタン(斜め配置)【<a href="./chapter4/03/index.html">作成物リンク03</a>】</li>
                     <li>【<a href="./chapter4/04/index.html">作成物リンク04</a>】</li>
                     <li>【<a href="./chapter4/05/index.html">作成物リンク05</a>】</li>
                 </ul>
@@ -39,17 +39,15 @@
         </section>
         <section id='3'>
             <h3>Chapter4で登場するメソッド</h3>
-            <h4>findメソッド</h4>
             <div class="textArea">
+                <h4>findメソッド</h4>
                 <div>
                     find('絞り込むセレクタ')
                 </div>
                 <ul>
                     <li>「jQueryオブジェクトに含まれる各要素の子孫要素の中から、セレクタを使用してさらに要素を絞り込むメソッド」</li>
                 </ul>
-            </div>
-            <h4>filterメソッド</h4>
-            <div class="textArea">
+                <h4>filterメソッド</h4>
                 <div>
                     find('絞り込むセレクタ')
                 </div>
@@ -81,26 +79,140 @@
                     </table>
                     ※「▲」は半角スペースを意味します<br>
                 </div>
+                <h4>eachメソッド</h4>
+                <div>
+                    each(function(index){   <br>
+                        要素ごとの処理        <br>
+                    });                     <br>
+                </div>
+                <ul>
+                    <ol>「jQueryオブジェクトに含まれる各要素に対して個別に処理を実行するメソッド」</ol>
+                    <ol>indexに関して→「現在処理されている要素の番号(全要素のうち何番目の要素か)」</ol>
+                </ul>
+                <h5>実例</h5>
+                $('#buttons2 button').each(function(index){ <br>
+                　　var pos = index * 40 - 40;              <br>
+                　　$(this).css('top', pos);                <br>
+                });                                         <br>
+
+                <h4>toggleClassメソッド</h4>
+                <p>
+                    「引数に指定されたクラス名(文字列)が、jQueryオブジェクト内の要素の<br>
+                    class属性に指定されているのか場合は追加し、すでに指定されている場合は<br>
+                    削除するメソッド」<br>
+                </p>
+                <h5>実例</h5>
+                <p>
+                    var $asidebutton = $aside.find('button').on('click', function(){<br>
+                        $aside.toggleClass('open');<br>
+                    });<br>
+                </p>
+                <div class="items">
+                    <div class="item">
+                        実行前
+                        <hr>
+                        &lt;aside class="open"&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/aside&gt;<br>
+                    </div>
+                    <div class="item">
+                        実行後 openクラスが削除される
+                        <hr>
+                        &lt;aside&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/aside&gt;<br>
+                    </div>
+                </div>
+                <h4>attrメソッド</h4>
+                attr()メソッド：属性値の取得(jQueryオブジェクトは返らない)
+                <hr>
+                attr(属性名);<br>
+                <br>
+                attr()メソッド：属性値の設定(jQueryオブジェクトは返らない)
+                <hr>
+                attr(属性名, 値);<br>
+                <h4>addClassメソッド(toggleClassメソッドの類似メソッド)</h4>
+                <p>
+                    「引数の文字列(クラス名)をclass属性に追加するメソッド」<br>
+                </p>
+                <h5>実例</h5>
+                <p>
+                    $('#add').addClass('test')
+                </p>
+                <div class="items">
+                    <div class="item">
+                        実行前
+                        <hr>
+                        &lt;p id = "add" class="add"&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/p&gt;<br>
+                    </div>
+                    <div class="item">
+                        実行後 testクラスが追加される
+                        <hr>
+                        &lt;p id = "add" class="add test"&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/p&gt;<br>
+                    </div>
+                </div>
+                <h4>removeClassメソッド(toggleClassメソッドの類似メソッド)</h4>
+                <p>
+                    「引数の文字列(クラス名)をclass属性に削除するメソッド」<br>
+                </p>
+                <h5>実例</h5>
+                <p>
+                    $('#add').removeClass('test')
+                </p>
+                <div class="items">
+                    <div class="item">
+                        実行前
+                        <hr>
+                        &lt;p id = "add" class="add test"&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/p&gt;<br>
+                    </div>
+                    <div class="item">
+                        実行後 testクラスが追加される
+                        <hr>
+                        &lt;p id = "add" class="add"&gt;<br>
+                        　&lt;!-- 内容は省略 --&gt;<br>
+                        &lt;/p&gt;<br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='4'>
+            <h3>Chapter4で登場するタグ</h3>
+            <div class="textArea">
+                <h4>asideタグ</h4>
+                <div>
+                    &lt;aside&gt; …… 余談・補足情報のセクションであることを示す
+                </div>
+                <h5>使い方</h5>
+                &lt;aside&gt; <br>
+                　&lt;h1&gt;アンパンマン誕生秘話&lt;/h1&gt; <br>
+                　&lt;p&gt; <br>
+                　　作者のやなせたかし先生は、人間は食べられないのが一番つらい、<br>
+                　　それを自分の身を犠牲にして助ける人こそが本当のヒーローだと考えて、<br>
+                　　アンパンマンのキャラクターを思いついたそうです。<br>
+                　&lt;/p&gt;<br>
+                &lt;aside&gt;<br>
             </div>
         </section>
         <section id='4'>
             <h3>・01[ボタン]<b>※成果物補足</b></h3>
-            <h4>１行目のボタンのJavaScript(jQuery)</h4>
             <div class="textArea">
+                <h4>１行目のボタンのJavaScript(jQuery)</h4>
                 <ul>
                     <li>マウスオーバーすると、そのボタンの背景色が徐々に変化する</li>
                     <li>マウスアウトすると、そのボタンの背景色が徐々に元に戻る</li>
                 </ul>
-            </div>
-            <h4>2行目のボタンのJavaScript(jQuery)</h4>
-            <div class="textArea">
+                <h4>2行目のボタンのJavaScript(jQuery)</h4>
                 <ul>
                     <li>マウスオーバーすると、そのボタンの外枠から徐々に色面が表示される</li>
                     <li>マウスアウトすると、徐々に色面が消える</li>
                 </ul>
-            </div>
-            <h4>3行目のボタンのJavaScript(jQuery)</h4>
-            <div class="textArea">
+                <h4>3行目のボタンのJavaScript(jQuery)</h4>
                 <ul>
                     <li>マウスオーバーすると、色面が左側からスライドインして、背景色と色文字の異なるボタンに変化する</li>
                     <li>マウスアウトすると、元に戻る</li>
@@ -109,22 +221,18 @@
         </section>
         <section id='5'>
             <h3>・02[キャプション表現]<b>※成果物補足</b></h3>
-            <h4>1つ目の画像のキャプション表現</h4>
             <div class="textArea">
+                <h4>1つ目の画像のキャプション表現</h4>
                 <ul>
                     <li>マウスオーバーすると、徐々にキャプションが表示され、外周に影がつく</li>
                     <li>マウスアウトすると、元に戻る</li>
                 </ul>
-            </div>
-            <h4>2つ目の画像のキャプション表現</h4>
-            <div class="textArea">
+                <h4>2つ目の画像のキャプション表現</h4>
                 <ul>
                     <li>マウスオーバーすると、キャプションが左側からスライドインされ、外周に影がつく</li>
                     <li>マウスアウトすると、元に戻る</li>
                 </ul>
-            </div>
-            <h4>3つ目の画像のキャプション表現</h4>
-            <div class="textArea">
+                <h4>3つ目の画像のキャプション表現</h4>
                 <ul>
                     <li>マウスオーバーすると、画像下部からキャプションがスライドインされ、画像自体も少し上方向にスライドされ、外周に影がつく</li>
                     <li>マウスアウトすると、元に戻る</li>
@@ -132,8 +240,45 @@
             </div>
         </section>
         <section id='6'>
-            
+            <h3>・03[丸ボタン(斜め配置)]<b>※成果物補足</b></h3>
+            <div class="textArea">
+                <h4>ボタン自体のホバーエフェクトの内容</h4>
+                <ul>
+                    <li>マウスオーバーすると、ボタンが白背景が黄色背景になる</li>
+                    <li>マウスアウトすると、元に戻る</li>
+                </ul>
+                <h4>斜め配置</h4>
+                eachメソッド内の
+                <ul>
+                    <li>1つ目のボタン (index:0) → 0 * 40 - 40 = -40</li>
+                    <li>2つ目のボタン (index:1) → 1 * 40 - 40 = 0</li>
+                    <li>3つ目のボタン (index:2) → 2 * 40 - 40 = 40</li>
+                    <li>4つ目のボタン (index:3) → 3 * 40 - 40 = 80</li>
+                </ul>
+            </div>
         </section>
+        <section id='7'>
+            <h3>・04[見え隠れするサイドバー]<b>※成果物補足</b></h3>
+            <div class="textArea">
+                <h4>動作内容</h4>
+                <div>
+                    「クリック操作によってWebページの左側に格納できるサイドバー」<br>
+                    <hr>
+                    openクリックするとサイドバーが左からスライドインして開き、<br>
+                    closeクリックするとサイドバーが右にスライドアウトしていく
+                </div>
+            </div>
+        </section>
+        <!-- <section id='8'>
+            <h3>・05[見え隠れするサイドバー]<b>※成果物補足</b></h3>
+            <div class="textArea">
+                <h4>ボタン自体のホバーエフェクトの内容</h4>
+                <ul>
+                    <li>マウスオーバーすると、ボタンが白背景が黄色背景になる</li>
+                    <li>マウスアウトすると、元に戻る</li>
+                </ul>
+            </div>
+        </section> -->
         <footer>
             <a href="./">戻る</a>
         </footer>

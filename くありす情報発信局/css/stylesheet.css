@@ -3,6 +3,9 @@
 :root {
 	--colorBase: #ffffff;
 	--backgroundColorBase: #222222;
+	--backgroundColorBaseChild: #5e5e57;
+	--backgroundColorBaseChildChild: #aaaa85;
+	--backgroundColorBaseChildChildChild: #d8d892;
 	--backgroundColorFooter: #bfc2b2;
 	--colorLink: rgb(70, 145, 89);
 	--colorVisited: #a577f0;
@@ -18,20 +21,21 @@ h1 {
 	font-size: 32px;
 }
 h3 {
-	padding-left: 10px;
+	padding: 10px;
 	color: #ffffff;
-	background-color: var(--backgroundColorBase);
+	background-color: var(--backgroundColorBaseChild);
 	font-size: 20px;
 }
 h4 {
+	padding: 5px;
 	color: var(--colorBase);
-	background-color: #555555;
+	background-color: var(--backgroundColorBaseChildChild);
 	font-size: 18px;
 	width: 80%;
 }
 h5 {
 	color: var(--colorBase);
-	background-color: #555555;
+	background-color: var(--backgroundColorBaseChildChildChild);
 	font-size: 16px;
 	width: 60%;
 	padding-left: 10px;

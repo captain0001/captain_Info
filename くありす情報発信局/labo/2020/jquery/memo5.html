@@ -14,13 +14,12 @@
         <header>
             <h1>Chapter5</h1>
         </header>
-        <hr>
         <section id='1'>
             <h3>成果物</h3>
             <div class="textArea">
                 <ul>
                     <li>滑らかな動きのスライドショー【<a href="./chapter5/01/index.html">作成物リンク01</a>】</li>
-                    <li>【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
+                    <li>多機能なスライドショー【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
                     <li>【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
                     <li>【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
                     <li>【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
@@ -33,12 +32,12 @@
         <section id='2'>
             <h3>Chapter5で学ぶこと</h3>
             <div class="textArea">
-                <ul>
-                    <li>スライドショーに関して</li>
+                <ol>
+                    <li>スライドショーに関して<span>【<a href="#6">簡易版</a>】</span><span>【<a href="#8">多機能版</a>】</span></li>
                     <li>タブ</li>
                     <li>スティッキーヘッダー</li>
                     <li>スムーズスクロール</li>
-                </ul>
+                </ol>
             </div>
         </section>
         <section id='3'>
@@ -71,6 +70,23 @@
                 </div>
                 <ul>
                     <li>fadeInメソッドと対になるメソッドなので、説明を省きます</li>
+                </ul>
+                <h4>hasClassメソッド</h4>
+                <div>
+                    hasClass()
+                </div>
+                <ul>
+                    <li>要素集合全てのうちから、引数に指定したクラスを持つ要素がひとつでもあればtrueを返す。</li>
+                    <li>類似メソッド：is(”.”+class) </li>
+                    <li><a href="http://semooh.jp/jquery/api/traversing/hasClass/class/">リファレンスサイト参照</a></li>
+                </ul>
+                <h4>htmlメソッド</h4>
+                <div>
+                    html()
+                </div>
+                <ul>
+                    <li>最初の要素をHTML文字列で返す。組み込みであるinnerHTMLの値と同じ。この関数はXMLでは動作しないが、XHTMLでは有効である。</li>
+                    <li><a href="http://semooh.jp/jquery/api/attributes/html/_/">リファレンスサイト参照</a></li>
                 </ul>
             </div>
         </section>
@@ -149,6 +165,88 @@
                 細かい記述方法は、ググると出る気がします。ここではそんなものあるんだくらいでいいです。
             </div>
         </section>
+        <section id='8'>
+            <h3>・02[多機能なスライドショー]<b>※成果物補足</b>[作成難度：レベル４]</h3>
+            <div class="textArea">
+                <h4>スライドショーの概要</h4>
+                簡易版だと細かな操作したい人にとっては不満を持つ人もいるでしょう。<br>
+                そこでいろんな機能を盛り込んだ多機能版を作成しよう。
+                <h4>スライドショーの処理の流れ</h4>
+                この手順を念頭において作成する
+                <ol>
+                    <li>スライドの[戻る]や[進む]が可能な<b class="important">「ナビゲーション機能」</b></li>
+                    <li>スライドの総数が画面下部がドットで示し、それぞれをクリックすることで該当のスライドを表示する<b class="important">[インジゲーター機能]</b></li>
+                    <li>一定時間ごとに自動で次の画像を表示する<b class="important">「オートプレイ機能」</b></li>
+                    <li>マウスオーバーでスライドショーを停止し、離れると再開する<b class="important">「ポーズ機能」</b></li>
+                </ol>
+                <img src="./img/silderLogic2-1.jpg" alt="多機能スライドショーの仕組み" srcset="">
+                <h4>主なjQueryメソッド</h4>
+                <ul>
+                    <li>addClass()</li>
+                    <li>removeClass()</li>
+                    <li>hasClass()</li>
+                    <li>html()</li>
+                    <li>css()</li>
+                    <li>animate()</li>
+                    <li>on()</li>
+                    <li>index()</li>
+                </ul>
+                <h4>主なjQueryプラグイン</h4>
+                <ul>
+                    <li>jQuery UI Effects Core</li>
+                </ul>
+                <h4>主なJavaScriptメソッド</h4>
+                <ul>
+                    <li>preventDefault()</li>
+                    <li>clearInterval()</li>
+                </ul>
+                <h4>スライドショーの構造</h4>
+                <img src="./img/silderLogic2-2.jpg" alt="" srcset="">
+                <img src="./img/silderLogic2-3.jpg" alt="" srcset="">
+                参考までに(<a href="http://apoc.jp/jquery-slider-howto/">類似記事の参照リンク</a>)
+            </div>
+        </section>
+        <!-- <section id='8'>
+            <h3>・03[多機能なスライドショー]<b>※成果物補足</b>[作成難度：レベル1]</h3>
+            <div class="textArea">
+                <h4>スライドショーの概要</h4>
+                簡易版だと細かな操作したい人にとっては不満を持つ人もいるでしょう。<br>
+                そこでいろんな機能を盛り込んだ多機能版を作成しよう。
+                <h4>スライドショーの処理の流れ</h4>
+                この手順を念頭において作成する
+                <ol>
+                    <li>スライドの[戻る]や[進む]が可能な<b class="important">「ナビゲーション機能」</b></li>
+                    <li>スライドの総数が画面下部がドットで示し、それぞれをクリックすることで該当のスライドを表示する<b class="important">[インジゲーター機能]</b></li>
+                    <li>一定時間ごとに自動で次の画像を表示する<b class="important">「オートプレイ機能」</b></li>
+                    <li>マウスオーバーでスライドショーを停止し、離れると再開する<b class="important">「ポーズ機能」</b></li>
+                </ol>
+                <img src="./img/silderLogic2-1.jpg" alt="多機能スライドショーの仕組み" srcset="">
+                <h4>主なjQueryメソッド</h4>
+                <ul>
+                    <li>addClass()</li>
+                    <li>removeClass()</li>
+                    <li>hasClass()</li>
+                    <li>html()</li>
+                    <li>css()</li>
+                    <li>animate()</li>
+                    <li>on()</li>
+                    <li>index()</li>
+                </ul>
+                <h4>主なjQueryプラグイン</h4>
+                <ul>
+                    <li>jQuery UI Effects Core</li>
+                </ul>
+                <h4>主なJavaScriptメソッド</h4>
+                <ul>
+                    <li>preventDefault()</li>
+                    <li>clearInterval()</li>
+                </ul>
+                <h4>スライドショーの構造</h4>
+                <img src="./img/silderLogic2-2.jpg" alt="" srcset="">
+                <img src="./img/silderLogic2-3.jpg" alt="" srcset="">
+                参考までに(<a href="http://apoc.jp/jquery-slider-howto/">類似記事の参照リンク</a>)
+            </div>
+        </section> -->
         <footer>
             <a href="./">戻る</a>
         </footer>

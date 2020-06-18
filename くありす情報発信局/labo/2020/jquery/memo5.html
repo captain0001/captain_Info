@@ -21,7 +21,7 @@
                     <li>滑らかな動きのスライドショー【<a href="./chapter5/01/index.html">作成物リンク01</a>】</li>
                     <li>多機能なスライドショー【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
                     <li>スティッキーヘッダー【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
-                    <li>【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
+                    <li>デザインが変化するスティッキーヘッダー【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
                     <li>【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
                     <li>【<a href="./chapter5/06/index.html">作成物リンク06</a>】</li>
                     <li>【<a href="./chapter5/07/index.html">作成物リンク07</a>】</li>
@@ -35,7 +35,7 @@
                 <ol>
                     <li>スライドショーに関して<span>【<a href="#6">簡易版</a>】</span><span>【<a href="#8">多機能版</a>】</span></li>
                     <li>タブ</li>
-                    <li>スティッキーヘッダー<span>【<a href="#9">簡易版</a>】</span></li>
+                    <li>スティッキーヘッダー<span>【<a href="#9">簡易版</a>】</span><span>【<a href="#10">デザイン変化版</a>】</span></li>
                     <li>スムーズスクロール</li>
                 </ol>
             </div>
@@ -226,6 +226,49 @@
                     <li>scrollTop()</li>
                     <li>trigger()</li>
                 </ul>
+            </div>
+        </section>
+        <section id='10'>
+            <h3>・04[デザインが変化するスティッキーヘッダー]<b>※成果物補足</b>[作成難度：レベル3]</h3>
+            <div class="textArea">
+                <h4>スティッキーヘッダーの概要</h4>
+                初期時のまま上部に固定すると見づらくなってしまうので、<br>
+                上部固定の初期値から離れた場合はデザインを変化するようにすると見やすくなります。<br>
+                今回は、そういったものを作成します。
+                <h4>スティッキーヘッダーの仕組み</h4>
+                「初期状態のヘッターの内容を複製し、スティッキー用のヘッダーを新たに作る」という方法で作成します
+                <ol>
+                    <li>初期状態のヘッダーは動かさず、常に元の位置に配置する</li>
+                    <li>ヘッダーのクローンを作成し、初期状態では画面上部の外側に配置しておく</li>
+                    <li>ウィンドウのスクロールによって初期状態のヘッダーが非表示になった時点で、ヘッダーのクローンを見える位置に移動する</li>
+                </ol>
+                下記の画像のようなものを作成する
+                <img src="./img/stickyHeader2-1.jpg" alt="" srcset="">
+                <h4>主なjQueryメソッド</h4>
+                <ul>
+                    <li>append()</li>
+                    <li>appendTo()</li>
+                    <li>contents()</li>
+                    <li>clone()</li>
+                    <li>outerHeight()</li>
+                </ul>
+                <h4>主なjQueryプラグイン</h4>
+                <ul>
+                    <li>jQuery throttle / debounce</li>
+                </ul>
+                <h4>パフォーマンスの低下を防ぐ処理</h4>
+                スクロールによる表示非表示でブラウザに負荷を与えてます。<br>
+                軽減するには、実行頻度をある程度までに抑えられれば良いのです。<br>
+                <h5>「スロットリング(throttling)」</h5>
+                『jQuery throttle / debounce』というプラグインで、上記の問題に対して<br>
+                エラー処理を記載することができます。<br>
+                <br>
+                実行例
+                <div class="codeView">
+                    $window.on('scroll', $.throttle(1000 / 15, function(){<br>
+                    　// 省略<br>
+                    }))
+                </div>
             </div>
         </section>
         <footer>

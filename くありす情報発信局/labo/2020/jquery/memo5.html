@@ -20,7 +20,7 @@
                 <ul>
                     <li>滑らかな動きのスライドショー【<a href="./chapter5/01/index.html">作成物リンク01</a>】</li>
                     <li>多機能なスライドショー【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
-                    <li>【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
+                    <li>スティッキーヘッダー【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
                     <li>【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
                     <li>【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
                     <li>【<a href="./chapter5/06/index.html">作成物リンク06</a>】</li>
@@ -35,7 +35,7 @@
                 <ol>
                     <li>スライドショーに関して<span>【<a href="#6">簡易版</a>】</span><span>【<a href="#8">多機能版</a>】</span></li>
                     <li>タブ</li>
-                    <li>スティッキーヘッダー</li>
+                    <li>スティッキーヘッダー<span>【<a href="#9">簡易版</a>】</span></li>
                     <li>スムーズスクロール</li>
                 </ol>
             </div>
@@ -206,47 +206,28 @@
                 参考までに(<a href="http://apoc.jp/jquery-slider-howto/">類似記事の参照リンク</a>)
             </div>
         </section>
-        <!-- <section id='8'>
-            <h3>・03[多機能なスライドショー]<b>※成果物補足</b>[作成難度：レベル1]</h3>
+        <section id='9'>
+            <h3>・03[スティッキーヘッダー]<b>※成果物補足</b>[作成難度：レベル1]</h3>
             <div class="textArea">
-                <h4>スライドショーの概要</h4>
-                簡易版だと細かな操作したい人にとっては不満を持つ人もいるでしょう。<br>
-                そこでいろんな機能を盛り込んだ多機能版を作成しよう。
-                <h4>スライドショーの処理の流れ</h4>
-                この手順を念頭において作成する
+                <h4>スティッキーヘッダーの概要</h4>
+                常に画面上部にヘッダーを配置するコンポーネントです。<br>
+                下記の画像のようなものがそうです。
+                <img src="./img/stickyHeader1-1.jpg" alt="" srcset="">
+                <h4>スティッキーヘッダーの処理の流れ</h4>
                 <ol>
-                    <li>スライドの[戻る]や[進む]が可能な<b class="important">「ナビゲーション機能」</b></li>
-                    <li>スライドの総数が画面下部がドットで示し、それぞれをクリックすることで該当のスライドを表示する<b class="important">[インジゲーター機能]</b></li>
-                    <li>一定時間ごとに自動で次の画像を表示する<b class="important">「オートプレイ機能」</b></li>
-                    <li>マウスオーバーでスライドショーを停止し、離れると再開する<b class="important">「ポーズ機能」</b></li>
+                    <li>ヘッダーのデフォルトの位置を保存する</li>
+                    <li>ウィンドウのスクロール量を常に監視する</li>
+                    <li>ウィンドウのスクロール量がヘッダーのデフォルトの位置を超えた場合は、ヘッダーをスティッキー配置する</li>
+                    <li>ウィンドウのスクロールが画面上部まで戻ったら、ヘッダーをデフォルトの位置に戻す</li>
                 </ol>
-                <img src="./img/silderLogic2-1.jpg" alt="多機能スライドショーの仕組み" srcset="">
                 <h4>主なjQueryメソッド</h4>
                 <ul>
-                    <li>addClass()</li>
-                    <li>removeClass()</li>
-                    <li>hasClass()</li>
-                    <li>html()</li>
-                    <li>css()</li>
-                    <li>animate()</li>
-                    <li>on()</li>
-                    <li>index()</li>
+                    <li>offset()</li>
+                    <li>scrollTop()</li>
+                    <li>trigger()</li>
                 </ul>
-                <h4>主なjQueryプラグイン</h4>
-                <ul>
-                    <li>jQuery UI Effects Core</li>
-                </ul>
-                <h4>主なJavaScriptメソッド</h4>
-                <ul>
-                    <li>preventDefault()</li>
-                    <li>clearInterval()</li>
-                </ul>
-                <h4>スライドショーの構造</h4>
-                <img src="./img/silderLogic2-2.jpg" alt="" srcset="">
-                <img src="./img/silderLogic2-3.jpg" alt="" srcset="">
-                参考までに(<a href="http://apoc.jp/jquery-slider-howto/">類似記事の参照リンク</a>)
             </div>
-        </section> -->
+        </section>
         <footer>
             <a href="./">戻る</a>
         </footer>

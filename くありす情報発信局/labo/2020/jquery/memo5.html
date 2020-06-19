@@ -22,7 +22,7 @@
                     <li>多機能なスライドショー【<a href="./chapter5/02/index.html">作成物リンク02</a>】</li>
                     <li>スティッキーヘッダー【<a href="./chapter5/03/index.html">作成物リンク03</a>】</li>
                     <li>デザインが変化するスティッキーヘッダー【<a href="./chapter5/04/index.html">作成物リンク04</a>】</li>
-                    <li>【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
+                    <li>画面領域を有効活用できるタブ【<a href="./chapter5/05/index.html">作成物リンク05</a>】</li>
                     <li>【<a href="./chapter5/06/index.html">作成物リンク06</a>】</li>
                     <li>【<a href="./chapter5/07/index.html">作成物リンク07</a>】</li>
                     <li>【<a href="./chapter5/08/index.html">作成物リンク08</a>】</li>
@@ -34,7 +34,7 @@
             <div class="textArea">
                 <ol>
                     <li>スライドショーに関して<span>【<a href="#6">簡易版</a>】</span><span>【<a href="#8">多機能版</a>】</span></li>
-                    <li>タブ</li>
+                    <li>タブ<span>【<a href="#11">簡易版</a>】</span></li>
                     <li>スティッキーヘッダー<span>【<a href="#9">簡易版</a>】</span><span>【<a href="#10">デザイン変化版</a>】</span></li>
                     <li>スムーズスクロール</li>
                 </ol>
@@ -242,7 +242,7 @@
                     <li>ヘッダーのクローンを作成し、初期状態では画面上部の外側に配置しておく</li>
                     <li>ウィンドウのスクロールによって初期状態のヘッダーが非表示になった時点で、ヘッダーのクローンを見える位置に移動する</li>
                 </ol>
-                下記の画像のようなものを作成する
+                下記の画像のようなものを作成する<br>
                 <img src="./img/stickyHeader2-1.jpg" alt="" srcset="">
                 <h4>主なjQueryメソッド</h4>
                 <ul>
@@ -269,6 +269,24 @@
                     　// 省略<br>
                     }))
                 </div>
+            </div>
+        </section>
+        <section id='11'>
+            <h3>・05[画面領域を有効活用できるタブ]<b>※成果物補足</b>[作成難度：レベル2]</h3>
+            <div class="textArea">
+                <h4>タブの仕組み</h4>
+                ページが読み込まれた段階で全てのパネルを一旦、<span class="codeArea">display: none;</span><br>
+                で非表示にし、１番目のタブに対応したパネルだけを<span class="codeArea">display: block;</span>で<br>
+                で表示します。(クリックしたタブは活性化表示し、それ以外のタブは、非活性化表示する) <br>
+                <br>
+                下記の画像のようなものを作成する<br>
+                <img src="./img/tab1-1.jpg" alt="" srcset="">
+                <h4>主なjQueryメソッド</h4>
+                <ul>
+                    <li>attr()</li>
+                    <li>hide()</li>
+                    <li>show()</li>
+                </ul>
             </div>
         </section>
         <footer>
